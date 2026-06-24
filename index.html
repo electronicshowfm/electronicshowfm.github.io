@@ -1,33 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electronic Show</title>
+
+<title>Electronic Show | Florian Mallet</title>
 
 <style>
 
 body{
+margin:0;
+padding:0;
 background:#000;
 color:white;
 font-family:Arial, sans-serif;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding-top:100px;
+background:linear-gradient(to bottom,#000,#001122);
 }
 
 h1{
+font-size:70px;
 color:#00BFFF;
-font-size:50px;
+margin:0;
+}
+
+.subtitle{
+font-size:22px;
+margin-top:10px;
+}
+
+.signal{
+margin-top:20px;
+letter-spacing:4px;
+color:#00BFFF;
+font-size:14px;
+}
+
+.section{
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+text-align:center;
 }
 
 h2{
-font-weight:normal;
+color:#00BFFF;
+font-size:40px;
 }
 
-a{
+.button{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#00BFFF;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+}
+
+.button:hover{
+background:white;
+}
+
+.socials a{
+display:inline-block;
+margin:10px;
 color:#00BFFF;
 text-decoration:none;
-font-size:20px;
+font-size:18px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#050505;
+font-size:14px;
+color:#777;
 }
 
 </style>
@@ -36,18 +94,121 @@ font-size:20px;
 
 <body>
 
+<section class="hero">
+
 <h1>ELECTRONIC SHOW</h1>
 
-<h2>Curated by Florian Mallet</h2>
+<p class="subtitle">
+Curated by Florian Mallet
+</p>
 
-<p>House & Tech House Sessions</p>
+<p>
+House • Tech House • Club Culture
+</p>
 
-<br>
+<p class="signal">
+SIGNAL RESTORED
+</p>
 
-<a href="https://www.mixcloud.com/FlorianMallet/">
-🎧 Listen on Mixcloud
+<a class="button"
+href="https://www.mixcloud.com/FlorianMallet/"
+target="_blank">
+🎧 Listen Now
 </a>
 
-</body>
+</section>
 
+<section class="section">
+
+<h2>Latest Episode</h2>
+
+<p>
+Electronic Show #015
+</p>
+
+<p>
+The latest House & Tech House session by Florian Mallet.
+</p>
+
+<a class="button"
+href="https://www.mixcloud.com/FlorianMallet/"
+target="_blank">
+▶ Listen on Mixcloud
+</a>
+
+</section>
+
+<section class="section">
+
+<h2>House Radio London</h2>
+
+<p>
+Electronic Show is broadcast every two weeks on House Radio London.
+</p>
+
+<p>
+21:00 - 22:00 UK Time
+</p>
+
+<a class="button"
+href="https://houseradio.net/"
+target="_blank">
+📻 House Radio
+</a>
+
+</section>
+
+<section class="section">
+
+<h2>About Florian Mallet</h2>
+
+<p>
+After more than 150 episodes broadcast across 32 countries,
+Florian Mallet returns with Electronic Show after a 15-year break.
+</p>
+
+<p>
+A selection of House and Tech House focused on club energy,
+underground culture and timeless tracks.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Follow Electronic Show</h2>
+
+<div class="socials">
+
+<a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">
+Mixcloud
+</a>
+
+<a href="https://www.facebook.com/ElectronicShowFM" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/electronicshowfm" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@electronicshow1" target="_blank">
+TikTok
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+Electronic Show © 2026
+
+<br><br>
+
+SIGNAL RESTORED
+
+</footer>
+
+</body>
 </html>

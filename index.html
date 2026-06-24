@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-  
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,83 +9,131 @@
 
 <style>
 
-body{
+*{
 margin:0;
 padding:0;
-background:#000;
-color:white;
-font-family:Arial, sans-serif;
+box-sizing:border-box;
+}
+
+body{
+background:#0A0A0A;
+color:#FFFFFF;
+font-family:Arial,sans-serif;
+line-height:1.6;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(to bottom,#000,#001122);
+padding:40px 20px;
+background:linear-gradient(to bottom,#0A0A0A,#141414);
 }
 
-h1{
-font-size:70px;
-color:#00BFFF;
-margin:0;
+.hero img{
+max-width:320px;
+width:80%;
+margin-bottom:30px;
 }
 
 .subtitle{
-font-size:22px;
-margin-top:10px;
+font-size:30px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.tagline{
+font-size:18px;
+color:#FFFFFF;
+margin-bottom:20px;
 }
 
 .signal{
-margin-top:20px;
-letter-spacing:4px;
-color:#00BFFF;
-font-size:14px;
+font-size:15px;
+letter-spacing:6px;
+color:#0066FF;
+margin-bottom:35px;
 }
 
 .section{
-padding:80px 20px;
 max-width:1000px;
 margin:auto;
+padding:80px 20px;
 text-align:center;
 }
 
 h2{
-color:#00BFFF;
-font-size:40px;
+font-size:42px;
+color:#0066FF;
+margin-bottom:25px;
+}
+
+.section p{
+max-width:700px;
+margin:auto;
+margin-bottom:15px;
 }
 
 .button{
 display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#00BFFF;
-color:#000;
+padding:15px 35px;
+background:#0066FF;
+color:#FFFFFF;
 text-decoration:none;
 font-weight:bold;
 border-radius:5px;
+transition:0.3s;
+margin-top:20px;
 }
 
 .button:hover{
-background:white;
+background:#FFFFFF;
+color:#0A0A0A;
+}
+
+.radio{
+background:#141414;
+}
+
+.about{
+background:#0A0A0A;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
 }
 
 .socials a{
-display:inline-block;
-margin:10px;
-color:#00BFFF;
+color:#0066FF;
+font-weight:bold;
 text-decoration:none;
-font-size:18px;
+}
+
+.socials a:hover{
+color:#FFFFFF;
 }
 
 footer{
+background:#141414;
 padding:40px;
 text-align:center;
-background:#050505;
+color:#777777;
 font-size:14px;
-color:#777;
+}
+
+hr{
+border:none;
+height:1px;
+background:#222;
+max-width:800px;
+margin:0 auto;
 }
 
 </style>
@@ -96,13 +144,13 @@ color:#777;
 
 <section class="hero">
 
-<img src="logo.png" alt="Electronic Show" style="max-width:320px;width:80%;margin-bottom:30px;">
+<img src="logo.png" alt="Electronic Show">
 
 <p class="subtitle">
 Curated by Florian Mallet
 </p>
 
-<p>
+<p class="tagline">
 House • Tech House • Club Culture
 </p>
 
@@ -118,6 +166,8 @@ target="_blank">
 
 </section>
 
+<hr>
+
 <section class="section">
 
 <h2>Dernier épisode</h2>
@@ -127,7 +177,11 @@ Electronic Show #014
 </p>
 
 <p>
-Le dernier épisode disponible d'Electronic Show, sélectionné et mixé par Florian Mallet.
+Classé #1 Tech House et #2 House sur Mixcloud.
+</p>
+
+<p>
+Une sélection House & Tech House orientée club et énergie.
 </p>
 
 <a class="button"
@@ -137,16 +191,19 @@ target="_blank">
 </a>
 
 </section>
-<section class="section">
+
+<hr>
+
+<section class="section radio">
 
 <h2>House Radio London</h2>
 
 <p>
-Electronic Show est diffusé un vendredi sur deux sur House Radio London.
+Retrouvez Electronic Show un vendredi sur deux sur House Radio London.
 </p>
 
 <p>
-21h - 22h UK Time
+21h - 22h (UK Time)
 </p>
 
 <a class="button"
@@ -157,19 +214,25 @@ target="_blank">
 
 </section>
 
-<section class="section">
+<hr>
 
-<h2>À propos de Florian Mallet</h2>
+<section class="section about">
+
+<h2>À propos</h2>
 
 <p>
-Après plus de 150000 téléchargements dans 32 pays, Florian Mallet relance Electronic Show après une pause de 15 ans.
+Après plus de 150000 téléchargements dans 32 pays et une pause de 15 ans,
+Florian Mallet relance Electronic Show avec une sélection House et Tech House
+orientée club, culture underground et morceaux intemporels.
 </p>
 
 <p>
-Une sélection House et Tech House orientée club, culture underground et morceaux intemporels.
+Electronic Show est aujourd'hui diffusé sur House Radio (London) et disponible sur Mixcloud.
 </p>
 
 </section>
+
+<hr>
 
 <section class="section">
 
@@ -177,20 +240,36 @@ Une sélection House et Tech House orientée club, culture underground et morcea
 
 <div class="socials">
 
-<a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Mixcloud</a>
-<a href="https://www.facebook.com/ElectronicShowFM" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/electronicshowfm" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@electronicshow1" target="_blank">TikTok</a>
+<a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">
+Mixcloud
+</a>
+
+<a href="https://www.facebook.com/ElectronicShowFM" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/electronicshowfm" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@electronicshow1" target="_blank">
+TikTok
+</a>
 
 </div>
 
 </section>
 
 <footer>
+
 Electronic Show © 2026
+
 <br><br>
+
 SIGNAL RESTORED
+
 </footer>
 
 </body>
+
 </html>

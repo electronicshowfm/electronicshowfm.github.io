@@ -10,21 +10,10 @@
 html{scroll-behavior:smooth}
 body{
 background:#0A0A0A;
-color:#FFFFFF;
+color:#FFF;
 font-family:Arial,sans-serif;
 line-height:1.6;
 overflow-x:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 15% 20%,rgba(0,102,255,.18),transparent 30%),
-radial-gradient(circle at 85% 15%,rgba(0,102,255,.14),transparent 35%),
-linear-gradient(180deg,#050505,#141414);
-z-index:-3;
 }
 
 nav{
@@ -37,24 +26,18 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:22px 7%;
-background:linear-gradient(to bottom,rgba(0,0,0,.75),transparent);
+background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent);
 backdrop-filter:blur(6px);
 }
-
-.nav-logo{
-height:48px;
-}
-
+.nav-logo{height:48px}
 nav a{
-color:#FFFFFF;
+color:#FFF;
 text-decoration:none;
 margin-left:26px;
 font-size:12px;
 letter-spacing:2px;
 text-transform:uppercase;
-opacity:.85;
 }
-
 nav a:hover{color:#0066FF}
 
 .hero{
@@ -63,7 +46,6 @@ position:relative;
 display:flex;
 align-items:center;
 padding:90px 8%;
-overflow:hidden;
 background:
 linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.88) 36%,rgba(5,5,5,.42) 68%,rgba(5,5,5,.16) 100%),
 url("hero.jpg");
@@ -72,36 +54,16 @@ background-position:65% center;
 background-repeat:no-repeat;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-radial-gradient(circle at 75% 45%,rgba(0,102,255,.20),transparent 32%),
-linear-gradient(180deg,transparent 0%,rgba(10,10,10,.88) 100%);
-z-index:0;
-}
-
-.es-bg{
-position:absolute;
-left:-90px;
-top:120px;
-width:520px;
-opacity:.08;
-filter:drop-shadow(0 0 45px rgba(0,102,255,.55));
-z-index:1;
-}
-
 .hero-content{
+max-width:680px;
 position:relative;
 z-index:2;
-max-width:680px;
 }
 
 .es-icon{
-width:86px;
-margin-bottom:26px;
-filter:drop-shadow(0 0 22px rgba(0,102,255,.65));
+width:145px;
+margin-bottom:30px;
+filter:drop-shadow(0 0 30px rgba(0,102,255,.75));
 }
 
 .kicker{
@@ -120,7 +82,6 @@ text-transform:uppercase;
 letter-spacing:-2px;
 margin-bottom:28px;
 }
-
 .hero h1 span{
 color:#0066FF;
 display:block;
@@ -145,18 +106,16 @@ text-transform:uppercase;
 font-size:13px;
 letter-spacing:2px;
 text-decoration:none;
-transition:.25s;
 text-align:center;
+transition:.25s;
 }
-
 .button.primary{
 background:#0066FF;
-color:#FFFFFF;
+color:#FFF;
 box-shadow:0 0 30px rgba(0,102,255,.45);
 }
-
 .button.primary:hover{
-background:#FFFFFF;
+background:#FFF;
 color:#0A0A0A;
 transform:translateY(-2px);
 }
@@ -185,41 +144,39 @@ font-size:18px;
 color:#D8D8D8;
 }
 
-.timeline{
-margin-top:50px;
+.timeline,.grid,.stats{
 display:grid;
+gap:24px;
+margin-top:42px;
+}
+
+.timeline{
 grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-gap:18px;
-}
-
-.timecard{
-background:rgba(20,20,20,.88);
-border:1px solid rgba(0,102,255,.28);
-border-radius:12px;
-padding:28px 22px;
-text-align:center;
-box-shadow:0 0 35px rgba(0,0,0,.45);
-}
-
-.timecard strong{
-display:block;
-font-size:38px;
-color:#0066FF;
-margin-bottom:8px;
 }
 
 .grid{
-display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:24px;
 }
 
-.card{
+.stats{
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+.timecard,.card,.stat{
 background:linear-gradient(180deg,rgba(20,20,20,.96),rgba(8,8,8,.96));
 border:1px solid rgba(0,102,255,.28);
 border-radius:14px;
-padding:34px;
+padding:32px;
 box-shadow:0 0 45px rgba(0,0,0,.55);
+}
+
+.timecard{text-align:center}
+
+.timecard strong,.stat strong{
+display:block;
+font-size:42px;
+color:#0066FF;
+margin-bottom:10px;
 }
 
 .card h3{
@@ -229,10 +186,11 @@ color:#0066FF;
 margin-bottom:16px;
 }
 
-.card p{
+.card p,.timecard,.stat{
 color:#D8D8D8;
-margin-bottom:13px;
 }
+
+.card p{margin-bottom:13px}
 
 .status{
 border:1px solid rgba(0,102,255,.35);
@@ -267,38 +225,14 @@ font-size:34px;
 color:#0066FF;
 }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:18px;
-margin-top:42px;
-}
-
-.stat{
-background:rgba(0,0,0,.55);
-border:1px solid rgba(0,102,255,.45);
-padding:30px 20px;
-border-radius:12px;
-text-align:center;
-}
-
-.stat strong{
-display:block;
-font-size:44px;
-color:#0066FF;
-line-height:1;
-margin-bottom:10px;
-}
-
 .manifesto{
 max-width:900px;
 margin:0 auto;
 text-align:center;
 font-size:25px;
 line-height:1.5;
-color:#FFFFFF;
+color:#FFF;
 }
-
 .manifesto span{color:#0066FF}
 
 .socials{
@@ -310,7 +244,7 @@ margin-top:34px;
 }
 
 .socials a{
-color:#FFFFFF;
+color:#FFF;
 text-decoration:none;
 border:1px solid rgba(0,102,255,.55);
 padding:14px 24px;
@@ -318,16 +252,14 @@ border-radius:4px;
 text-transform:uppercase;
 font-size:13px;
 letter-spacing:1px;
-transition:.25s;
 }
-
 .socials a:hover{background:#0066FF}
 
 footer{
 text-align:center;
 padding:50px 20px;
 background:#050505;
-color:#777777;
+color:#777;
 font-size:14px;
 }
 
@@ -339,34 +271,19 @@ opacity:.35;
 }
 
 @media(max-width:760px){
-nav{
-padding:18px 22px;
-}
-nav div:last-child{
-display:none;
-}
-.nav-logo{
-height:42px;
-}
+nav{padding:18px 22px}
+nav div:last-child{display:none}
+.nav-logo{height:42px}
 .hero{
 padding:90px 24px;
 background-position:center right;
 }
-.es-bg{
-width:360px;
-left:-120px;
-top:110px;
-}
-.es-icon{
-width:70px;
-}
+.es-icon{width:105px}
 .hero h1{
 font-size:44px;
 letter-spacing:-1px;
 }
-.hero-text{
-font-size:16px;
-}
+.hero-text{font-size:16px}
 .button{
 width:100%;
 min-width:auto;
@@ -393,8 +310,6 @@ padding:32px;
 </nav>
 
 <section class="hero">
-<img class="es-bg" src="es.png" alt="Electronic Show Symbol">
-
 <div class="hero-content">
 
 <img class="es-icon" src="es.png" alt="Electronic Show Symbol">
@@ -419,7 +334,6 @@ Une émission pensée pour celles et ceux qui vivent encore la culture club comm
 
 <section class="section center" id="story">
 <h2 class="section-title">Une histoire. <span class="blue">Un retour.</span> Un signal.</h2>
-
 <p class="lead">
 Avant son retour, Electronic Show avait déjà connu une première vie : plus de 150 épisodes,
 une audience dans 32 pays, puis une longue pause. Aujourd'hui, le projet revient avec une identité
@@ -462,7 +376,6 @@ plus mature, plus personnelle et une énergie résolument club.
 
 <section class="section" id="residence">
 <div class="status">
-
 <div>
 <h2>Résidence <span class="blue">Radio</span></h2>
 <p class="lead">
@@ -477,13 +390,11 @@ UK Time
 <br><br>
 <a class="button primary" href="https://houseradio.net/" target="_blank">House Radio</a>
 </div>
-
 </div>
 </section>
 
 <section class="section center" id="about">
 <h2 class="section-title">Florian <span class="blue">Mallet</span></h2>
-
 <p class="lead">
 DJ et créateur d'Electronic Show, Florian Mallet revient avec une approche plus personnelle,
 plus exigeante et toujours guidée par la même envie : partager une House Music sincère,
@@ -493,7 +404,6 @@ plus exigeante et toujours guidée par la même envie : partager une House Music
 
 <section class="section center">
 <h2 class="section-title">Les <span class="blue">chiffres</span></h2>
-
 <div class="stats">
 <div class="stat"><strong>#1</strong>Tech House Chart</div>
 <div class="stat"><strong>#2</strong>House Chart</div>
@@ -512,7 +422,6 @@ Electronic Show n'est pas un souvenir du passé.
 
 <section class="section center" id="contact">
 <h2 class="section-title">Suivre <span class="blue">Electronic Show</span></h2>
-
 <div class="socials">
 <a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Mixcloud</a>
 <a href="https://www.facebook.com/ElectronicShowFM" target="_blank">Facebook</a>

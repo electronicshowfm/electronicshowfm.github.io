@@ -524,9 +524,9 @@ text-shadow:0 0 18px rgba(0,102,255,.35);
 /* JOIN */
 
 .join-section{
-max-width:1050px;
+max-width:1100px;
 margin:0 auto;
-padding:140px 22px;
+padding:150px 22px;
 text-align:center;
 }
 
@@ -554,27 +554,144 @@ line-height:1.8;
 color:#DADADA;
 }
 
-.socials{
+.transmission-grid{
 display:flex;
 justify-content:center;
-gap:18px;
+gap:30px;
 flex-wrap:wrap;
-margin-top:34px;
+margin-top:60px;
 }
 
-.socials a{
-color:#FFF;
+.transmission-beacon{
 text-decoration:none;
-border:1px solid rgba(0,102,255,.55);
-padding:14px 24px;
-border-radius:4px;
-text-transform:uppercase;
-font-size:13px;
-letter-spacing:1px;
-transition:.25s;
+color:#FFF;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:16px;
+animation:beaconAppear .8s ease forwards;
+opacity:0;
 }
 
-.socials a:hover{background:#0066FF}
+.transmission-beacon:nth-child(1){animation-delay:.15s}
+.transmission-beacon:nth-child(2){animation-delay:.3s}
+.transmission-beacon:nth-child(3){animation-delay:.45s}
+.transmission-beacon:nth-child(4){animation-delay:.6s}
+.transmission-beacon:nth-child(5){animation-delay:.75s}
+
+@keyframes beaconAppear{
+from{
+opacity:0;
+transform:translateY(18px) scale(.92);
+}
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+}
+
+.beacon-circle{
+width:92px;
+height:92px;
+border-radius:50%;
+border:1px solid rgba(0,102,255,.55);
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle,rgba(0,102,255,.18),rgba(0,0,0,.88));
+box-shadow:
+0 0 20px rgba(0,102,255,.28),
+inset 0 0 18px rgba(0,102,255,.18);
+transition:.3s;
+animation:beaconPulse 4.2s ease-in-out infinite;
+}
+
+@keyframes beaconPulse{
+0%{
+box-shadow:
+0 0 20px rgba(0,102,255,.22),
+inset 0 0 18px rgba(0,102,255,.14);
+}
+50%{
+box-shadow:
+0 0 34px rgba(0,102,255,.55),
+0 0 70px rgba(0,102,255,.22),
+inset 0 0 24px rgba(0,102,255,.25);
+}
+100%{
+box-shadow:
+0 0 20px rgba(0,102,255,.22),
+inset 0 0 18px rgba(0,102,255,.14);
+}
+}
+
+.beacon-circle i{
+font-size:34px;
+color:#FFF;
+transition:.3s;
+}
+
+.beacon-label{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#DADADA;
+transition:.3s;
+}
+
+.transmission-beacon:hover{
+transform:translateY(-6px);
+}
+
+.transmission-beacon:hover .beacon-circle{
+border-color:#0066FF;
+box-shadow:
+0 0 40px rgba(0,102,255,.75),
+0 0 90px rgba(0,102,255,.35),
+inset 0 0 28px rgba(0,102,255,.28);
+}
+
+.transmission-beacon:hover i,
+.transmission-beacon:hover .beacon-label{
+color:#0066FF;
+}
+
+.connection-status{
+margin-top:70px;
+display:flex;
+flex-direction:column;
+gap:12px;
+align-items:center;
+animation:statusReveal 1s ease forwards;
+animation-delay:1.05s;
+opacity:0;
+}
+
+@keyframes statusReveal{
+from{
+opacity:0;
+transform:translateY(14px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.connection-status span{
+font-size:12px;
+letter-spacing:7px;
+text-transform:uppercase;
+color:#0066FF;
+}
+
+.connection-status strong{
+font-size:15px;
+letter-spacing:6px;
+text-transform:uppercase;
+color:#FFF;
+text-shadow:0 0 18px rgba(0,102,255,.35);
+}
 
 /* FOOTER */
 
@@ -621,6 +738,22 @@ color:#666;
 .hero{
 padding:90px 24px;
 background-position:center right;
+.beacon-circle{
+width:78px;
+height:78px;
+}
+
+.beacon-circle i{
+font-size:28px;
+}
+
+.transmission-grid{
+gap:24px;
+}
+
+.connection-status strong{
+font-size:12px;
+letter-spacing:4px;
 }
 
 .es-icon{width:170px}
@@ -660,6 +793,7 @@ font-size:18px;
 }
 }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -827,6 +961,7 @@ La passion demeure.
 </section>
 
 <section class="join-section" id="contact">
+
 <p class="join-kicker">REJOINDRE LE SIGNAL</p>
 
 <h2>
@@ -838,13 +973,40 @@ l'univers Electronic Show.
 Suivez les épisodes, les Inside, les diffusions radio et les prochaines transmissions.
 </p>
 
-<div class="socials">
-<a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Mixcloud</a>
-<a href="https://www.youtube.com/@electronic_show_fm" target="_blank">YouTube</a>
-<a href="https://www.facebook.com/ElectronicShowFM" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/electronicshowfm" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@electronicshow1" target="_blank">TikTok</a>
+<div class="transmission-grid">
+
+<a href="https://www.mixcloud.com/FlorianMallet/" target="_blank" class="transmission-beacon">
+<span class="beacon-circle"><i class="fa-brands fa-mixcloud"></i></span>
+<span class="beacon-label">Mixcloud</span>
+</a>
+
+<a href="https://www.youtube.com/@electronic_show_fm" target="_blank" class="transmission-beacon">
+<span class="beacon-circle"><i class="fa-brands fa-youtube"></i></span>
+<span class="beacon-label">YouTube</span>
+</a>
+
+<a href="https://www.facebook.com/ElectronicShowFM" target="_blank" class="transmission-beacon">
+<span class="beacon-circle"><i class="fa-brands fa-facebook-f"></i></span>
+<span class="beacon-label">Facebook</span>
+</a>
+
+<a href="https://www.instagram.com/electronicshowfm" target="_blank" class="transmission-beacon">
+<span class="beacon-circle"><i class="fa-brands fa-instagram"></i></span>
+<span class="beacon-label">Instagram</span>
+</a>
+
+<a href="https://www.tiktok.com/@electronicshow1" target="_blank" class="transmission-beacon">
+<span class="beacon-circle"><i class="fa-brands fa-tiktok"></i></span>
+<span class="beacon-label">TikTok</span>
+</a>
+
 </div>
+
+<div class="connection-status">
+<span>SIGNAL ACQUIRED</span>
+<strong>YOU ARE NOW CONNECTED</strong>
+</div>
+
 </section>
 
 <footer>

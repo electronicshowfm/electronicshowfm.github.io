@@ -222,6 +222,76 @@ margin:0 auto;
 padding:100px 22px;
 }
 
+<section class="silence-section">
+
+<div class="silence-glow"></div>
+
+<h2>15 ans.</h2>
+
+<p>
+Le silence n'efface jamais une passion.
+</p>
+
+<p class="silence-line">
+Certaines fréquences ne disparaissent jamais.
+</p>
+
+</section>
+
+.silence-section{
+min-height:85vh;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:100px 22px;
+overflow:hidden;
+background:#030303;
+}
+
+.silence-glow{
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+background:radial-gradient(circle, rgba(0,102,255,.18), transparent 65%);
+filter:blur(20px);
+animation:silenceGlow 6s ease-in-out infinite;
+}
+
+@keyframes silenceGlow{
+0%{opacity:.25;transform:scale(.9)}
+50%{opacity:1;transform:scale(1.1)}
+100%{opacity:.25;transform:scale(.9)}
+}
+
+.silence-section h2{
+position:relative;
+z-index:1;
+font-size:clamp(70px,12vw,150px);
+line-height:1;
+text-transform:uppercase;
+margin-bottom:30px;
+}
+
+.silence-section p{
+position:relative;
+z-index:1;
+max-width:760px;
+font-size:22px;
+color:#D8D8D8;
+}
+
+.silence-line{
+margin-top:22px;
+color:#0066FF !important;
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:15px !important;
+}
+
 .origins-title{
 font-size:clamp(42px,7vw,88px);
 text-transform:uppercase;

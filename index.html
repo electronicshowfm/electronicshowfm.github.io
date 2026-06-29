@@ -7,7 +7,9 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 html{scroll-behavior:smooth}
+
 body{
 background:#0A0A0A;
 color:#FFF;
@@ -16,19 +18,65 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-nav{
-display:none;
+/* GLOBAL */
+
+.center{text-align:center}
+.blue{color:#0066FF}
+
+.section{
+max-width:1180px;
+margin:0 auto;
+padding:90px 22px;
 }
-.nav-logo{height:48px}
-nav a{
-color:#FFF;
-text-decoration:none;
-margin-left:26px;
-font-size:12px;
-letter-spacing:2px;
+
+.section-title{
+font-size:clamp(34px,5vw,62px);
+line-height:1.05;
 text-transform:uppercase;
+margin-bottom:24px;
 }
-nav a:hover{color:#0066FF}
+
+.lead{
+max-width:850px;
+margin:0 auto;
+font-size:18px;
+color:#D8D8D8;
+}
+
+.button{
+display:inline-block;
+padding:18px 55px;
+min-width:320px;
+border-radius:3px;
+font-weight:bold;
+text-transform:uppercase;
+font-size:13px;
+letter-spacing:2px;
+text-decoration:none;
+text-align:center;
+transition:.25s;
+}
+
+.button.primary{
+background:#0066FF;
+color:#FFF;
+box-shadow:0 0 30px rgba(0,102,255,.45);
+}
+
+.button.primary:hover{
+background:#FFF;
+color:#0A0A0A;
+transform:translateY(-2px);
+}
+
+hr{
+border:0;
+height:1px;
+background:linear-gradient(90deg,transparent,#0066FF,transparent);
+opacity:.35;
+}
+
+/* HERO */
 
 .hero{
 min-height:100vh;
@@ -84,14 +132,13 @@ drop-shadow(0 0 55px rgba(0,102,255,.35));
 }
 }
 
-
 .kicker{
-    color:#0066FF;
-    font-size:13px;
-    letter-spacing:8px;
-    text-transform:uppercase;
-    font-weight:bold;
-    text-align:center;
+color:#0066FF;
+font-size:13px;
+letter-spacing:8px;
+text-transform:uppercase;
+font-weight:bold;
+text-align:center;
 }
 
 .hero h1{
@@ -101,6 +148,7 @@ text-transform:uppercase;
 letter-spacing:-2px;
 margin-bottom:28px;
 }
+
 .hero h1 span{
 color:#0066FF;
 display:block;
@@ -115,53 +163,7 @@ color:#DADADA;
 margin-bottom:38px;
 }
 
-.button{
-display:inline-block;
-padding:18px 55px;
-min-width:320px;
-border-radius:3px;
-font-weight:bold;
-text-transform:uppercase;
-font-size:13px;
-letter-spacing:2px;
-text-decoration:none;
-text-align:center;
-transition:.25s;
-}
-.button.primary{
-background:#0066FF;
-color:#FFF;
-box-shadow:0 0 30px rgba(0,102,255,.45);
-}
-.button.primary:hover{
-background:#FFF;
-color:#0A0A0A;
-transform:translateY(-2px);
-}
-
-.section{
-max-width:1180px;
-margin:0 auto;
-padding:85px 22px;
-}
-
-.center{text-align:center}
-
-.section-title{
-font-size:clamp(34px,5vw,62px);
-line-height:1.05;
-text-transform:uppercase;
-margin-bottom:24px;
-}
-
-.blue{color:#0066FF}
-
-.lead{
-max-width:850px;
-margin:0 auto;
-font-size:18px;
-color:#D8D8D8;
-}
+/* SIGNAL */
 
 .signal-section{
 min-height:80vh;
@@ -206,15 +208,7 @@ line-height:1.8;
 color:#D8D8D8;
 }
 
-.timeline,.grid,.stats{
-display:grid;
-gap:24px;
-margin-top:42px;
-}
-
-.timeline{
-grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-}
+/* ORIGINES */
 
 .origins-section{
 max-width:1000px;
@@ -222,21 +216,84 @@ margin:0 auto;
 padding:100px 22px;
 }
 
-<section class="silence-section">
+.origins-title{
+font-size:clamp(42px,7vw,88px);
+text-transform:uppercase;
+text-align:center;
+margin-bottom:70px;
+}
 
-<div class="silence-glow"></div>
+.origins-title span{color:#0066FF}
 
-<h2>15 ans.</h2>
+.origin-item{
+border-left:3px solid rgba(0,102,255,.75);
+padding:0 0 75px 38px;
+position:relative;
+}
 
-<p>
-Le silence n'efface jamais une passion.
-</p>
+.origin-item::before{
+content:"";
+position:absolute;
+left:-10px;
+top:0;
+width:17px;
+height:17px;
+background:#0066FF;
+border-radius:50%;
+box-shadow:
+0 0 18px rgba(0,102,255,1),
+0 0 55px rgba(0,102,255,.55);
+animation:nodePulse 3.5s ease-in-out infinite;
+}
 
-<p class="silence-line">
-Certaines fréquences ne disparaissent jamais.
-</p>
+@keyframes nodePulse{
+0%{transform:scale(1);opacity:.75}
+50%{transform:scale(1.35);opacity:1}
+100%{transform:scale(1);opacity:.75}
+}
 
-</section>
+.origin-item strong{
+display:block;
+font-size:clamp(42px,6vw,78px);
+color:#0066FF;
+line-height:1;
+margin-bottom:18px;
+}
+
+.origin-item p{
+max-width:680px;
+font-size:20px;
+line-height:1.8;
+color:#D8D8D8;
+}
+
+.origin-item.silence strong{color:#FFF}
+
+.origin-final{
+text-align:center;
+padding-top:40px;
+}
+
+.origin-final p{
+color:#0066FF;
+font-size:14px;
+letter-spacing:8px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:22px;
+}
+
+.origin-final h3{
+font-size:clamp(46px,8vw,100px);
+line-height:.95;
+text-transform:uppercase;
+color:#FFF;
+text-shadow:
+0 0 20px rgba(0,102,255,.45),
+0 0 55px rgba(0,102,255,.25);
+}
+
+/* SILENCE */
 
 .silence-section{
 min-height:85vh;
@@ -256,7 +313,7 @@ position:absolute;
 width:420px;
 height:420px;
 border-radius:50%;
-background:radial-gradient(circle, rgba(0,102,255,.18), transparent 65%);
+background:radial-gradient(circle,rgba(0,102,255,.18),transparent 65%);
 filter:blur(20px);
 animation:silenceGlow 6s ease-in-out infinite;
 }
@@ -292,358 +349,8 @@ text-transform:uppercase;
 font-size:15px !important;
 }
 
-.origins-title{
-font-size:clamp(42px,7vw,88px);
-text-transform:uppercase;
-text-align:center;
-margin-bottom:70px;
-}
+/* UNIVERS */
 
-.origins-title span{
-color:#0066FF;
-}
-
-.origin-item{
-border-left:3px solid rgba(0,102,255,.75);
-padding:0 0 75px 38px;
-position:relative;
-}
-
-.origin-item::before{
-content:"";
-position:absolute;
-left:-10px;
-top:0;
-width:17px;
-height:17px;
-background:#0066FF;
-border-radius:50%;
-box-shadow:
-0 0 18px rgba(0,102,255,1),
-0 0 55px rgba(0,102,255,.55);
-animation:nodePulse 3.5s ease-in-out infinite;
-}
-
-@keyframes nodePulse{
-0%{
-transform:scale(1);
-opacity:.75;
-}
-50%{
-transform:scale(1.35);
-opacity:1;
-}
-100%{
-transform:scale(1);
-opacity:.75;
-}
-}
-
-.origin-item strong{
-display:block;
-font-size:clamp(42px,6vw,78px);
-color:#0066FF;
-line-height:1;
-margin-bottom:18px;
-}
-
-.origin-item p{
-max-width:680px;
-font-size:20px;
-line-height:1.8;
-color:#D8D8D8;
-}
-
-.origin-item.silence strong{
-color:#FFFFFF;
-}
-
-.origin-final h3{
-font-size:clamp(46px,8vw,100px);
-line-height:.95;
-text-transform:uppercase;
-color:#FFFFFF;
-text-shadow:
-0 0 20px rgba(0,102,255,.45),
-0 0 55px rgba(0,102,255,.25);
-}
-
-.origin-final p{
-color:#0066FF;
-font-size:14px;
-letter-spacing:8px;
-font-weight:bold;
-text-transform:uppercase;
-margin-bottom:22px;
-}
-
-.origin-final h3{
-font-size:clamp(46px,8vw,100px);
-line-height:.95;
-text-transform:uppercase;
-text-shadow:0 0 25px rgba(0,102,255,.35);
-}
-
-.grid{
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-}
-
-.stats{
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-}
-
-.timecard,.card,.stat{
-background:linear-gradient(180deg,rgba(20,20,20,.96),rgba(8,8,8,.96));
-border:1px solid rgba(0,102,255,.28);
-border-radius:14px;
-padding:32px;
-box-shadow:0 0 45px rgba(0,0,0,.55);
-}
-
-.timecard{text-align:center}
-
-.timecard strong,.stat strong{
-display:block;
-font-size:42px;
-color:#0066FF;
-margin-bottom:10px;
-}
-
-.card h3{
-font-size:26px;
-text-transform:uppercase;
-color:#0066FF;
-margin-bottom:16px;
-}
-
-.card p,.timecard,.stat{
-color:#D8D8D8;
-}
-
-.card p{margin-bottom:13px}
-
-.card .button{
-display:block;
-width:260px;
-margin:30px auto 0;
-text-align:center;
-}
-
-.status{
-border:1px solid rgba(0,102,255,.35);
-border-radius:16px;
-padding:46px;
-background:
-linear-gradient(135deg,rgba(0,102,255,.16),rgba(0,0,0,.88)),
-rgba(20,20,20,.92);
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:28px;
-align-items:center;
-}
-
-.status h2{
-font-size:clamp(34px,5vw,58px);
-text-transform:uppercase;
-line-height:1.05;
-}
-
-.status-box{
-border:1px solid rgba(0,102,255,.45);
-padding:28px;
-border-radius:12px;
-background:rgba(0,0,0,.38);
-text-align:center;
-}
-
-.status-box strong{
-display:block;
-font-size:34px;
-color:#0066FF;
-}
-
-.manifesto{
-max-width:900px;
-margin:0 auto;
-text-align:center;
-font-size:25px;
-line-height:1.5;
-color:#FFF;
-}
-.manifesto span{color:#0066FF}
-
-.socials{
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-margin-top:34px;
-}
-
-.socials a{
-color:#FFF;
-text-decoration:none;
-border:1px solid rgba(0,102,255,.55);
-padding:14px 24px;
-border-radius:4px;
-text-transform:uppercase;
-font-size:13px;
-letter-spacing:1px;
-}
-.socials a:hover{background:#0066FF}
-
-footer{
-text-align:center;
-padding:50px 20px;
-background:#050505;
-color:#777;
-font-size:14px;
-}
-
-hr{
-border:0;
-height:1px;
-background:linear-gradient(90deg,transparent,#0066FF,transparent);
-opacity:.35;
-}
-
-@media(max-width:760px){
-nav{padding:18px 22px}
-nav div:last-child{display:none}
-.nav-logo{height:42px}
-.hero{
-padding:90px 24px;
-background-position:center right;
-}
-.es-icon{width:170px}
-.hero h1{
-font-size:44px;
-letter-spacing:-1px;
-}
-.hero-text{font-size:16px}
-.button{
-width:100%;
-min-width:auto;
-}
-.status{
-grid-template-columns:1fr;
-padding:32px;
-}
-}
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-<div class="hero-content">
-
-<div class="hero-symbol">
-
-    <img class="es-icon" src="es.png" alt="Electronic Show Symbol">
-
-    <div class="kicker">SIGNAL RESTORED</div>
-
-</div>
-
-<h1>Après 15 ans de silence,<span>le signal est de retour.</span></h1>
-
-<p class="hero-text">
-Electronic Show est le retour d'une histoire commencée il y a plus de quinze ans.
-Une émission pensée pour celles et ceux qui vivent encore la culture club comme une passion.
-</p>
-
-<a class="button primary" href="https://www.mixcloud.com/FlorianMallet/" target="_blank">
-Écouter Electronic Show
-</a>
-
-</div>
-</section>
-
-<hr>
-
-<section class="signal-section" id="story">
-
-<div class="signal-line"></div>
-
-<p class="signal-small">LA FRÉQUENCE DEMEURE</p>
-
-<h2>
-Avant le retour,<br>
-il y avait déjà le signal.
-</h2>
-
-<p class="signal-text">
-Electronic Show n'est pas né d'un algorithme, d'une tendance ou d'un besoin de publier.
-Il est né d'une passion pour la House Music, les clubs, les radios et cette énergie unique
-qui traverse les années sans jamais disparaître.
-</p>
-
-</section>
-<section class="origins-section">
-
-<h2 class="origins-title">Les <span>origines</span></h2>
-
-<div class="origin-item">
-<strong>2003</strong>
-<p>Les premiers clubs. Les premières nuits. La découverte d’une culture qui ne quittera plus jamais Florian Mallet.</p>
-</div>
-
-<div class="origin-item">
-<strong>2004</strong>
-<p>Les premières radios. Les premiers mixes. Electronic Show commence à prendre forme.</p>
-</div>
-
-<div class="origin-item">
-<strong>150+</strong>
-<p>Plus de 150 épisodes diffusés dans la première vie du projet.</p>
-</div>
-
-<div class="origin-item">
-<strong>32</strong>
-<p>Une audience présente dans 32 pays.</p>
-</div>
-
-<div class="origin-item silence">
-<strong>15 ans</strong>
-<p>Le silence. Les platines s’arrêtent, mais la fréquence demeure.</p>
-</div>
-
-<div class="origin-final">
-<p>LA FRÉQUENCE DEMEURE</p>
-<h3>SIGNAL RESTORED</h3>
-</div>
-
-</section>
-<section class="universe-section" id="episodes">
-
-<h2 class="section-title center">L’univers <span class="blue">Electronic Show</span></h2>
-
-<div class="universe-grid">
-
-<div class="universe-card">
-<span>01</span>
-<h3>Electronic Show</h3>
-<p>Les épisodes complets. Une sélection House & Tech House construite comme une montée en tension.</p>
-<a class="button primary" href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Écouter les mixes</a>
-</div>
-
-<div class="universe-card">
-<span>02</span>
-<h3>Inside</h3>
-<p>Les histoires derrière les morceaux. Un titre, un artiste, une anecdote, une transmission.</p>
-<a class="button primary" href="https://www.youtube.com/@electronic_show_fm" target="_blank">Voir sur YouTube</a>
-</div>
-<div class="universe-card">
-<span>03</span>
-<h3>Résidence Radio</h3>
-<p>Electronic Show est diffusé un vendredi sur deux sur House Radio London.</p>
-<a class="button primary" href="https://houseradio.net/" target="_blank">House Radio</a>
-</div>
-
-</div>
-
-</section>
 .universe-section{
 max-width:1280px;
 margin:0 auto;
@@ -687,7 +394,7 @@ font-weight:bold;
 font-size:clamp(34px,5vw,58px);
 line-height:1;
 text-transform:uppercase;
-color:#FFFFFF;
+color:#FFF;
 margin:24px 0;
 }
 
@@ -698,54 +405,305 @@ line-height:1.7;
 margin-bottom:28px;
 }
 
-<div class="status-box">
-<strong>21h – 22h</strong>
-UK Time
-<br><br>
+.universe-card .button{
+display:block;
+width:260px;
+margin:30px auto 0;
+text-align:center;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:24px;
+margin-top:42px;
+}
+
+.stat{
+background:linear-gradient(180deg,rgba(20,20,20,.96),rgba(8,8,8,.96));
+border:1px solid rgba(0,102,255,.28);
+border-radius:14px;
+padding:32px;
+text-align:center;
+box-shadow:0 0 45px rgba(0,0,0,.55);
+color:#D8D8D8;
+}
+
+.stat strong{
+display:block;
+font-size:42px;
+color:#0066FF;
+margin-bottom:10px;
+}
+
+/* MANIFESTE */
+
+.manifesto{
+max-width:900px;
+margin:0 auto;
+text-align:center;
+font-size:25px;
+line-height:1.5;
+color:#FFF;
+}
+
+.manifesto span{color:#0066FF}
+
+/* SOCIALS */
+
+.socials{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:34px;
+}
+
+.socials a{
+color:#FFF;
+text-decoration:none;
+border:1px solid rgba(0,102,255,.55);
+padding:14px 24px;
+border-radius:4px;
+text-transform:uppercase;
+font-size:13px;
+letter-spacing:1px;
+transition:.25s;
+}
+
+.socials a:hover{background:#0066FF}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:50px 20px;
+background:#050505;
+color:#777;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+.hero{
+padding:90px 24px;
+background-position:center right;
+}
+
+.es-icon{width:170px}
+
+.hero h1{
+font-size:44px;
+letter-spacing:-1px;
+}
+
+.hero-text{
+font-size:16px;
+}
+
+.button{
+width:100%;
+min-width:auto;
+}
+
+.universe-card .button{
+width:100%;
+}
+
+.signal-small,
+.kicker,
+.origin-final p{
+letter-spacing:5px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="hero-symbol">
+<img class="es-icon" src="es.png" alt="Electronic Show Symbol">
+<div class="kicker">SIGNAL RESTORED</div>
+</div>
+
+<h1>Après 15 ans de silence,<span>le signal est de retour.</span></h1>
+
+<p class="hero-text">
+Electronic Show est le retour d'une histoire commencée il y a plus de quinze ans.
+Une émission pensée pour celles et ceux qui vivent encore la culture club comme une passion.
+</p>
+
+<a class="button primary" href="https://www.mixcloud.com/FlorianMallet/" target="_blank">
+Écouter Electronic Show
+</a>
+
+</div>
+</section>
+
+<hr>
+
+<section class="signal-section" id="story">
+
+<div class="signal-line"></div>
+
+<p class="signal-small">LA FRÉQUENCE DEMEURE</p>
+
+<h2>
+Avant le retour,<br>
+il y avait déjà le signal.
+</h2>
+
+<p class="signal-text">
+Electronic Show n'est pas né d'un algorithme, d'une tendance ou d'un besoin de publier.
+Il est né d'une passion pour la House Music, les clubs, les radios et cette énergie unique
+qui traverse les années sans jamais disparaître.
+</p>
+
+</section>
+
+<section class="origins-section">
+
+<h2 class="origins-title">Les <span>origines</span></h2>
+
+<div class="origin-item">
+<strong>2003</strong>
+<p>Les premiers clubs. Les premières nuits. La découverte d'une culture qui ne quittera plus jamais Florian Mallet.</p>
+</div>
+
+<div class="origin-item">
+<strong>2004</strong>
+<p>Les premières radios. Les premiers mixes. Electronic Show commence à prendre forme.</p>
+</div>
+
+<div class="origin-item">
+<strong>150+</strong>
+<p>Plus de 150 épisodes diffusés dans la première vie du projet.</p>
+</div>
+
+<div class="origin-item">
+<strong>32</strong>
+<p>Une audience présente dans 32 pays.</p>
+</div>
+
+<div class="origin-item silence">
+<strong>15 ans</strong>
+<p>Le silence. Les platines s'arrêtent, mais la fréquence demeure.</p>
+</div>
+
+<div class="origin-final">
+<p>LA FRÉQUENCE DEMEURE</p>
+<h3>SIGNAL RESTORED</h3>
+</div>
+
+</section>
+
+<section class="silence-section">
+
+<div class="silence-glow"></div>
+
+<h2>15 ans.</h2>
+
+<p>Le silence n'efface jamais une passion.</p>
+
+<p class="silence-line">Certaines fréquences ne disparaissent jamais.</p>
+
+</section>
+
+<section class="universe-section" id="episodes">
+
+<h2 class="section-title center">L'univers <span class="blue">Electronic Show</span></h2>
+
+<div class="universe-grid">
+
+<div class="universe-card">
+<div>
+<span>01</span>
+<h3>Electronic Show</h3>
+<p>Les épisodes complets. Une sélection House & Tech House construite comme une montée en tension.</p>
+</div>
+<a class="button primary" href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Écouter les mixes</a>
+</div>
+
+<div class="universe-card">
+<div>
+<span>02</span>
+<h3>Inside</h3>
+<p>Les histoires derrière les morceaux. Un titre, un artiste, une anecdote, une transmission.</p>
+</div>
+<a class="button primary" href="https://www.youtube.com/@electronic_show_fm" target="_blank">Voir sur YouTube</a>
+</div>
+
+<div class="universe-card">
+<div>
+<span>03</span>
+<h3>Résidence Radio</h3>
+<p>Electronic Show est diffusé un vendredi sur deux sur House Radio London.</p>
+</div>
 <a class="button primary" href="https://houseradio.net/" target="_blank">House Radio</a>
 </div>
+
 </div>
 </section>
 
 <section class="section center" id="about">
+
 <h2 class="section-title">Florian <span class="blue">Mallet</span></h2>
+
 <p class="lead">
 DJ et créateur d'Electronic Show, Florian Mallet revient avec une approche plus personnelle,
 plus exigeante et toujours guidée par la même envie : partager une House Music sincère,
 énergique et intemporelle.
 </p>
+
 </section>
 
 <section class="section center">
+
 <h2 class="section-title">Les <span class="blue">chiffres</span></h2>
+
 <div class="stats">
 <div class="stat"><strong>#1</strong>Tech House Chart</div>
 <div class="stat"><strong>#2</strong>House Chart</div>
 <div class="stat"><strong>13K+</strong>écoutes sur #013</div>
 <div class="stat"><strong>2K+</strong>followers Mixcloud</div>
 </div>
+
 </section>
 
 <section class="section">
+
 <p class="manifesto">
 Electronic Show n'est pas un souvenir du passé.
 <br>
 <span>C'est un signal qui n'a jamais cessé d'émettre.</span>
 </p>
+
 </section>
 
 <section class="section center" id="contact">
-<h2 class="section-title">Suivre <span class="blue">Electronic Show</span></h2>
+
+<h2 class="section-title">Rejoindre <span class="blue">le signal</span></h2>
+
 <div class="socials">
 <a href="https://www.mixcloud.com/FlorianMallet/" target="_blank">Mixcloud</a>
+<a href="https://www.youtube.com/@electronic_show_fm" target="_blank">YouTube</a>
 <a href="https://www.facebook.com/ElectronicShowFM" target="_blank">Facebook</a>
 <a href="https://www.instagram.com/electronicshowfm" target="_blank">Instagram</a>
 <a href="https://www.tiktok.com/@electronicshow1" target="_blank">TikTok</a>
 </div>
+
 </section>
 
 <footer>
 Electronic Show © 2026
+<br><br>
+LA FRÉQUENCE DEMEURE
 <br><br>
 SIGNAL RESTORED
 </footer>

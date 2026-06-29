@@ -234,21 +234,39 @@ color:#0066FF;
 }
 
 .origin-item{
-border-left:3px solid #0066FF;
-padding:0 0 70px 35px;
+border-left:3px solid rgba(0,102,255,.75);
+padding:0 0 75px 38px;
 position:relative;
 }
 
 .origin-item::before{
 content:"";
 position:absolute;
-left:-9px;
+left:-10px;
 top:0;
-width:15px;
-height:15px;
+width:17px;
+height:17px;
 background:#0066FF;
 border-radius:50%;
-box-shadow:0 0 25px rgba(0,102,255,.9);
+box-shadow:
+0 0 18px rgba(0,102,255,1),
+0 0 55px rgba(0,102,255,.55);
+animation:nodePulse 3.5s ease-in-out infinite;
+}
+
+@keyframes nodePulse{
+0%{
+transform:scale(1);
+opacity:.75;
+}
+50%{
+transform:scale(1.35);
+opacity:1;
+}
+100%{
+transform:scale(1);
+opacity:.75;
+}
 }
 
 .origin-item strong{
@@ -270,9 +288,14 @@ color:#D8D8D8;
 color:#FFFFFF;
 }
 
-.origin-final{
-text-align:center;
-padding-top:40px;
+.origin-final h3{
+font-size:clamp(46px,8vw,100px);
+line-height:.95;
+text-transform:uppercase;
+color:#FFFFFF;
+text-shadow:
+0 0 20px rgba(0,102,255,.45),
+0 0 55px rgba(0,102,255,.25);
 }
 
 .origin-final p{

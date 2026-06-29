@@ -51,19 +51,39 @@ z-index:2;
 }
 
 .hero-symbol{
-    display:inline-flex;
-    flex-direction:column;
-    align-items:center;
-    margin-bottom:55px;
+display:inline-flex;
+flex-direction:column;
+align-items:center;
+margin-bottom:65px;
 }
 
 .es-icon{
-    width:320px;
-    margin-bottom:10px;
-    filter:
-    drop-shadow(0 0 25px rgba(0,102,255,.9))
-    drop-shadow(0 0 60px rgba(0,102,255,.45));
+width:320px;
+margin-bottom:10px;
+animation:esPulse 4.5s ease-in-out infinite;
 }
+
+@keyframes esPulse{
+0%{
+transform:scale(1);
+filter:
+drop-shadow(0 0 25px rgba(0,102,255,.75))
+drop-shadow(0 0 55px rgba(0,102,255,.35));
+}
+50%{
+transform:scale(1.035);
+filter:
+drop-shadow(0 0 35px rgba(0,102,255,1))
+drop-shadow(0 0 90px rgba(0,102,255,.65));
+}
+100%{
+transform:scale(1);
+filter:
+drop-shadow(0 0 25px rgba(0,102,255,.75))
+drop-shadow(0 0 55px rgba(0,102,255,.35));
+}
+}
+
 
 .kicker{
     color:#0066FF;

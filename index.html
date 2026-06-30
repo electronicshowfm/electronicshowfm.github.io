@@ -66,6 +66,45 @@ background:linear-gradient(90deg,transparent,#0066FF,transparent);
 opacity:.35;
 }
 
+/* V7 - SIGNAL PATH */
+
+.signal-path{
+position:fixed;
+top:0;
+left:34px;
+width:2px;
+height:100vh;
+background:linear-gradient(
+to bottom,
+transparent,
+rgba(0,102,255,.25),
+rgba(0,102,255,.75),
+rgba(0,102,255,.25),
+transparent
+);
+box-shadow:
+0 0 18px rgba(0,102,255,.45),
+0 0 45px rgba(0,102,255,.22);
+z-index:0;
+pointer-events:none;
+animation:signalPathPulse 5s ease-in-out infinite;
+}
+
+@keyframes signalPathPulse{
+0%{
+opacity:.25;
+transform:scaleY(.85);
+}
+50%{
+opacity:1;
+transform:scaleY(1);
+}
+100%{
+opacity:.25;
+transform:scaleY(.85);
+}
+}
+
 /* HERO */
 
 .hero{
@@ -743,6 +782,11 @@ width:78px;
 height:78px;
 }
 
+.signal-path{
+left:18px;
+opacity:.35;
+}
+
 .beacon-circle i{
 font-size:28px;
 }
@@ -797,6 +841,8 @@ font-size:18px;
 </head>
 
 <body>
+
+<div class="signal-path"></div>
 
 <section class="hero">
 <div class="hero-content">

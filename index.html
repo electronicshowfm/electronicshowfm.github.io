@@ -90,6 +90,42 @@ pointer-events:none;
 animation:signalPathPulse 5s ease-in-out infinite;
 }
 
+.signal-path::after{
+content:"";
+position:absolute;
+top:-25%;
+left:0;
+width:2px;
+height:22%;
+background:linear-gradient(
+to bottom,
+transparent,
+rgba(0,102,255,1),
+transparent
+);
+box-shadow:
+0 0 18px rgba(0,102,255,.9),
+0 0 55px rgba(0,102,255,.45);
+animation:signalTravel 7s linear infinite;
+}
+
+@keyframes signalTravel{
+0%{
+top:-25%;
+opacity:0;
+}
+10%{
+opacity:1;
+}
+90%{
+opacity:1;
+}
+100%{
+top:110%;
+opacity:0;
+}
+}
+
 @keyframes signalPathPulse{
 0%{
 opacity:.25;

@@ -61,7 +61,7 @@ animation:signalTravel 7s linear infinite;
 position:relative;
 }
 
-.signal-node{
+.section-node{
 position:absolute;
 left:34px;
 top:80px;
@@ -76,7 +76,7 @@ animation:nodePulse 3s infinite ease-in-out;
 z-index:50;
 }
 
-.signal-node::after{
+.section-node::after{
 content:"";
 position:absolute;
 left:26px;

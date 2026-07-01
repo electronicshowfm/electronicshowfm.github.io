@@ -61,20 +61,31 @@ animation:signalTravel 7s linear infinite;
 position:relative;
 }
 
-.section-node{
+.signal-node{
 position:absolute;
-left:-41px;
-top:110px;
+left:calc(34px - ((100vw - 100%) / 2));
+top:80px;
 width:16px;
 height:16px;
 border-radius:50%;
 background:#0066FF;
 box-shadow:
-0 0 10px rgba(0,102,255,.8),
-0 0 25px rgba(0,102,255,.45);
+0 0 12px rgba(0,102,255,1),
+0 0 35px rgba(0,102,255,.55);
 animation:nodePulse 3s infinite ease-in-out;
-z-index:6;
-pointer-events:none;
+z-index:5;
+}
+
+.signal-node::after{
+content:"";
+position:absolute;
+left:22px;
+top:7px;
+width:90px;
+height:18px;
+background:url("data:image/svg+xml,%3Csvg width='90' height='18' viewBox='0 0 90 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 9 H26 L32 3 L39 15 L46 1 L53 17 L60 9 H90' fill='none' stroke='%230066FF' stroke-width='2'/%3E%3C/svg%3E") center/contain no-repeat;
+filter:drop-shadow(0 0 8px rgba(0,102,255,.8));
+opacity:.75;
 }
 
 @keyframes nodePulse{

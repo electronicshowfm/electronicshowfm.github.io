@@ -102,3 +102,9 @@ width:55px;
 opacity:.45;
 }
 }
+
+@media(max-width:760px){
+.cinematic-emblem{
+width:260px;
+}
+}

@@ -144,22 +144,6 @@ filter:blur(0);
 }
 }
 
-.hero-frequency{
-width:240px;
-height:2px;
-background:#0066FF;
-box-shadow:0 0 18px rgba(0,102,255,.8);
-margin-bottom:18px;
-transform:scaleX(0);
-animation:frequencyLine 1s ease forwards;
-animation-delay:1.45s;
-}
-
-@keyframes frequencyLine{
-from{transform:scaleX(0)}
-to{transform:scaleX(1)}
-}
-
 .kicker{
 opacity:0;
 animation:kickerReveal .7s ease forwards;

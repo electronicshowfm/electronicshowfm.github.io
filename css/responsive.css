@@ -108,4 +108,14 @@ opacity:.45;
 width:280px;
 }
 }
+
+@media(max-width:760px){
+.section-node{
+left:calc(18px - 8px - ((100vw - 100%) / 2));
+}
+
+.section-node::after{
+width:70px;
+opacity:.55;
+}
 }

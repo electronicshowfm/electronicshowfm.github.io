@@ -75,3 +75,19 @@ letter-spacing:5px;
 font-size:18px;
 }
 }
+@media(max-width:760px){
+.es-css-symbol{
+width:150px;
+height:150px;
+gap:16px;
+}
+
+.es-css-symbol span{
+width:88px;
+height:18px;
+}
+
+.hero-frequency{
+width:160px;
+}
+}

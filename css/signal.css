@@ -63,7 +63,7 @@ position:relative;
 
 .section-node{
 position:absolute;
-left:34px;
+left:calc(34px - 8px - ((100vw - 100%) / 2));
 top:80px;
 width:16px;
 height:16px;
@@ -79,8 +79,8 @@ z-index:50;
 .section-node::after{
 content:"";
 position:absolute;
-left:26px;
-top:-1px;
+left:16px;
+top:-3px;
 width:120px;
 height:22px;
 background:url("data:image/svg+xml,%3Csvg width='120' height='22' viewBox='0 0 120 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11 H34 L42 4 L50 18 L58 2 L66 20 L74 11 H120' fill='none' stroke='%230066FF' stroke-width='2.2'/%3E%3C/svg%3E") center/contain no-repeat;

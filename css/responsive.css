@@ -91,3 +91,14 @@ height:18px;
 width:160px;
 }
 }
+
+@media(max-width:760px){
+.signal-node{
+left:calc(18px - ((100vw - 100%) / 2));
+}
+
+.signal-node::after{
+width:55px;
+opacity:.45;
+}
+}

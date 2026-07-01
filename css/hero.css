@@ -107,7 +107,7 @@ transform:scale(1);
 }
 
 .cinematic-emblem{
-width:420px;
+width:520px;
 margin-bottom:22px;
 opacity:0;
 animation:emblemReveal 1.2s ease forwards;

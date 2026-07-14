@@ -12,6 +12,8 @@ Version complète V8 du site officiel Electronic Show.
 - Scan lumineux sur les cartes Signal 01 / 02 / 03.
 - Boutons vivants avec pulsation subtile.
 - Écran court de transmission avant ouverture des liens externes.
+- Ajout du formulaire contact@electronicshow.fr
+- Médiakit disponible au téléchargement
 
 ## Structure
 

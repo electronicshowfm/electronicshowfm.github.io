@@ -1,0 +1,77 @@
+/* =========================================================
+   ELECTRONIC SHOW V7 — RESPONSIVE
+   Mobile and small screens adjustments
+   ========================================================= */
+
+@media(max-width:760px){
+.hero{
+padding:90px 24px;
+background-position:center right;
+}
+
+.signal-path{
+left:18px;
+opacity:.35;
+}
+
+.section-node{
+left:-15px;
+top:80px;
+width:14px;
+height:14px;
+}
+
+.es-icon{width:170px}
+
+.hero h1{
+font-size:44px;
+letter-spacing:-1px;
+}
+
+.hero-text,
+.signal-text,
+.creator-section p,
+.join-text{
+font-size:16px;
+}
+
+.button{
+width:100%;
+min-width:auto;
+}
+
+.universe-card .button{
+width:100%;
+}
+
+.beacon-circle{
+width:78px;
+height:78px;
+}
+
+.beacon-circle i{
+font-size:28px;
+}
+
+.transmission-grid{
+gap:24px;
+}
+
+.connection-status strong{
+font-size:12px;
+letter-spacing:4px;
+}
+
+.signal-small,
+.kicker,
+.origin-final p,
+.creator-kicker,
+.manifesto-kicker,
+.join-kicker{
+letter-spacing:5px;
+}
+
+.manifesto-text p{
+font-size:18px;
+}
+}

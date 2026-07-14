@@ -1,0 +1,247 @@
+/* =========================================================
+   ELECTRONIC SHOW V7 — JOIN / TRANSMISSION BEACONS
+   Final connection section
+   ========================================================= */
+
+.join-section{
+max-width:1100px;
+margin:0 auto;
+padding:150px 22px;
+text-align:center;
+}
+
+.join-kicker{
+color:#0066FF;
+letter-spacing:8px;
+font-size:13px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:28px;
+}
+
+.join-section h2{
+font-size:clamp(46px,7vw,92px);
+line-height:1;
+text-transform:uppercase;
+margin-bottom:34px;
+}
+
+.join-text{
+max-width:720px;
+margin:0 auto;
+font-size:20px;
+line-height:1.8;
+color:#DADADA;
+}
+
+.transmission-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:60px;
+}
+
+.transmission-beacon{
+text-decoration:none;
+color:#FFF;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:16px;
+animation:beaconAppear .8s ease forwards;
+opacity:0;
+}
+
+.transmission-beacon:nth-child(1){animation-delay:.15s}
+.transmission-beacon:nth-child(2){animation-delay:.3s}
+.transmission-beacon:nth-child(3){animation-delay:.45s}
+.transmission-beacon:nth-child(4){animation-delay:.6s}
+.transmission-beacon:nth-child(5){animation-delay:.75s}
+
+@keyframes beaconAppear{
+from{opacity:0;transform:translateY(18px) scale(.92)}
+to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+.beacon-circle{
+width:92px;
+height:92px;
+border-radius:50%;
+border:1px solid rgba(0,102,255,.55);
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle,rgba(0,102,255,.18),rgba(0,0,0,.88));
+box-shadow:
+0 0 20px rgba(0,102,255,.28),
+inset 0 0 18px rgba(0,102,255,.18);
+transition:.3s;
+animation:beaconPulse 4.2s ease-in-out infinite;
+}
+
+@keyframes beaconPulse{
+0%{box-shadow:0 0 20px rgba(0,102,255,.22),inset 0 0 18px rgba(0,102,255,.14)}
+50%{box-shadow:0 0 34px rgba(0,102,255,.55),0 0 70px rgba(0,102,255,.22),inset 0 0 24px rgba(0,102,255,.25)}
+100%{box-shadow:0 0 20px rgba(0,102,255,.22),inset 0 0 18px rgba(0,102,255,.14)}
+}
+
+.beacon-circle i{
+font-size:34px;
+color:#FFF;
+transition:.3s;
+}
+
+.beacon-label{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#DADADA;
+transition:.3s;
+}
+
+.transmission-beacon:hover{
+transform:translateY(-6px);
+}
+
+.transmission-beacon:hover .beacon-circle{
+border-color:#0066FF;
+box-shadow:
+0 0 40px rgba(0,102,255,.75),
+0 0 90px rgba(0,102,255,.35),
+inset 0 0 28px rgba(0,102,255,.28);
+}
+
+.transmission-beacon:hover i,
+.transmission-beacon:hover .beacon-label{
+color:#0066FF;
+}
+
+.connection-status{
+margin-top:70px;
+display:flex;
+flex-direction:column;
+gap:12px;
+align-items:center;
+animation:statusReveal 1s ease forwards;
+animation-delay:1.05s;
+opacity:0;
+}
+
+@keyframes statusReveal{
+from{opacity:0;transform:translateY(14px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.connection-status span{
+font-size:12px;
+letter-spacing:7px;
+text-transform:uppercase;
+color:#0066FF;
+}
+
+.connection-status strong{
+font-size:15px;
+letter-spacing:6px;
+text-transform:uppercase;
+color:#FFF;
+text-shadow:0 0 18px rgba(0,102,255,.35);
+}
+
+
+/* =========================================================
+   ELECTRONIC SHOW V8 — CONTACT & MEDIA KIT
+   ========================================================= */
+
+.contact-panel{
+  max-width:820px;
+  margin:76px auto 0;
+  padding:42px 34px;
+  border:1px solid rgba(0,102,255,.32);
+  border-radius:26px;
+  background:linear-gradient(145deg,rgba(0,102,255,.10),rgba(10,10,10,.82));
+  box-shadow:0 0 34px rgba(0,102,255,.12),inset 0 0 28px rgba(0,102,255,.06);
+}
+
+.contact-kicker{
+  margin:0 0 18px;
+  color:#0066FF;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.contact-panel h3{
+  margin:0 0 18px;
+  font-size:clamp(26px,4vw,44px);
+  line-height:1.1;
+  text-transform:uppercase;
+}
+
+.contact-panel > p:not(.contact-kicker){
+  max-width:650px;
+  margin:0 auto;
+  color:#DADADA;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.contact-actions .button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  min-width:245px;
+}
+
+.media-kit-button{
+  border:1px solid #0066FF;
+  color:#FFF;
+  background:transparent;
+}
+
+.media-kit-button:hover{
+  color:#FFF;
+  background:#0066FF;
+  box-shadow:0 0 28px rgba(0,102,255,.45);
+}
+
+.contact-email{
+  display:inline-block;
+  margin-top:24px;
+  color:#FFF;
+  font-size:15px;
+  letter-spacing:1px;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,102,255,.7);
+  transition:.25s;
+}
+
+.contact-email:hover{
+  color:#0066FF;
+}
+
+@media (max-width:620px){
+  .contact-panel{
+    margin-top:58px;
+    padding:34px 20px;
+  }
+
+  .contact-actions{
+    flex-direction:column;
+  }
+
+  .contact-actions .button{
+    width:100%;
+    min-width:0;
+  }
+}

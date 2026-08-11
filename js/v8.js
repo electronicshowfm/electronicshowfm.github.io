@@ -1,5 +1,5 @@
 /* =========================================================
-   ELECTRONIC SHOW V8 — TRANSMISSION EXPERIENCE JS
+   ELECTRONIC SHOW V8 â€” TRANSMISSION EXPERIENCE JS
    Section activation, signal pulses and outbound transmission screen
    ========================================================= */
 
@@ -35,6 +35,31 @@
     setTimeout(triggerSignalPulse, 3200);
   });
 
+  function trackEvent(name, link){
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', name, {
+      link_url: link.href,
+      link_text: (link.textContent || '').trim().slice(0, 100),
+      transport_type: 'beacon'
+    });
+  }
+
+  document.querySelectorAll('a[href]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.href || '';
+
+      if (href.includes('mixcloud.com/')) {
+        trackEvent('mixcloud_listen', link);
+      } else if (href.startsWith('mailto:')) {
+        trackEvent('contact_click', link);
+      } else if (href.includes('/doc/') && href.toLowerCase().endsWith('.pdf')) {
+        trackEvent('media_kit_download', link);
+      } else if (/instagram\.com|facebook\.com|tiktok\.com|youtube\.com/.test(href)) {
+        trackEvent('social_click', link);
+      }
+    });
+  });
+
   document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       const href = link.getAttribute('href');
@@ -51,3 +76,4 @@
     });
   });
 })();
+

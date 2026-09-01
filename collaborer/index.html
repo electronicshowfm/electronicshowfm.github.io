@@ -19,7 +19,7 @@
     <main class="page collab-page">
       <p class="eyebrow">TERMINAL 04 — COLLABORER</p>
       <h1>CONSTRUISONS LA<br><span>PROCHAINE FRÉQUENCE.</span></h1>
-      <p class="lead">Electronic Show développe des collaborations avec les radios, les marques, les commerces et les artistes. Chaque proposition s’appuie sur un format clairement défini, une identité forte et un échange direct. Consultez l’offre correspondant à votre projet, puis contactez ES sans formulaire intermédiaire.</p>
+      <p class="lead">Electronic Show développe des collaborations avec les radios, les marques, les commerces, les salles de sport et les artistes. Chaque proposition s’appuie sur un format clairement défini, une identité forte et un échange direct.</p>
       <section class="collab-grid">
         <article class="collab panel">
           <span class="status">RADIOS</span>
@@ -45,6 +45,23 @@
           <p>Vous êtes DJ, producteur ou acteur de la scène électronique ? Proposez un guest mix, une interview, une collaboration en production ou une participation à un prochain épisode d’Electronic Show.</p>
           <div class="button-row"><a class="btn btn--blue" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact@electronicshow.fr&amp;su=Proposition%20artiste%20%2F%20guest%20—%20Electronic%20Show" target="_blank" rel="noreferrer">ÉCRIRE DIRECTEMENT</a></div>
         </article>
+        <article class="collab panel collab--workout">
+          <span class="status">SALLES DE SPORT</span>
+          <h2>WORKOUT SESSIONS</h2>
+          <p>Transformez la musique de votre salle en véritable moteur d’entraînement. Des DJ sets House, Tech House et Afro House construits comme une séance : échauffement, montée progressive et pic d’intensité, avec un QR code permettant aux adhérents de retrouver le mix après l’effort.</p>
+          <div class="workout-levels" aria-label="Les trois niveaux Workout Sessions"><span>WARM-UP<br><b>120-124 BPM</b></span><span>TRAINING<br><b>124-128 BPM</b></span><span>PEAK<br><b>128-132 BPM</b></span></div>
+          <div class="button-row"><a class="btn" href="../doc/Electronic-Show-Workout-Sessions-2026.pdf" download>TÉLÉCHARGER LE CONCEPT</a><a class="btn btn--blue" href="#inscription-workout">DEVENIR SALLE PILOTE</a></div>
+        </article>
+      </section>
+      <section class="workout-form panel" id="inscription-workout" aria-labelledby="workout-form-title">
+        <div class="workout-form__intro"><span class="status">CANDIDATURE PILOTE</span><h2 id="workout-form-title">FAITES ENTRER VOTRE SALLE<br><span>DANS LA FRÉQUENCE.</span></h2><p>Présentez-nous votre établissement et vos besoins. Electronic Show étudiera votre candidature et vous contactera pour construire un premier test adapté à votre communauté.</p></div>
+        <form class="pilot-form" data-workout-form action="https://formsubmit.co/ajax/electronic.show.fm@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle candidature Workout Sessions — Electronic Show"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
+          <label>Nom de la salle *<input type="text" name="Salle" required autocomplete="organization"></label><label>Nom du contact *<input type="text" name="Contact" required autocomplete="name"></label><label>Adresse e-mail professionnelle *<input type="email" name="Email" required autocomplete="email"></label><label>Téléphone<input type="tel" name="Téléphone" autocomplete="tel"></label><label>Ville *<input type="text" name="Ville" required autocomplete="address-level2"></label>
+          <label>Type d’établissement *<select name="Type d’établissement" required><option value="">Choisir</option><option>Salle indépendante</option><option>Studio de cours collectifs</option><option>Cross-training / HYROX</option><option>Club premium</option><option>Franchise</option><option>Autre</option></select></label>
+          <label>Nombre approximatif d’adhérents<select name="Nombre d’adhérents"><option value="">Non précisé</option><option>Moins de 250</option><option>250 à 500</option><option>500 à 1 000</option><option>Plus de 1 000</option></select></label><label>Format qui vous intéresse<select name="Format souhaité"><option value="">À définir ensemble</option><option>Warm-up — 120-124 BPM</option><option>Training — 124-128 BPM</option><option>Peak Workout — 128-132 BPM</option><option>Parcours complet</option><option>Édition sur mesure</option></select></label>
+          <label class="form-wide">Parlez-nous de votre salle et de l’ambiance recherchée *<textarea name="Projet" rows="5" required></textarea></label><label class="form-consent form-wide"><input type="checkbox" name="Consentement" value="Oui" required><span>J’accepte que ces informations soient utilisées par Electronic Show uniquement pour répondre à cette candidature. *</span></label><button class="btn btn--blue form-wide" type="submit">ENVOYER MA CANDIDATURE</button><p class="form-status form-wide" data-form-status aria-live="polite"></p>
+        </form>
       </section>
     </main>
   </div>
